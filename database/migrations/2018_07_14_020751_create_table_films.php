@@ -24,6 +24,7 @@ class CreateTableFilms extends Migration
             $table->string('country',50);
             $table->text('genre');
             $table->text('photo');
+            $table->text('slug');
         });
     }
 
