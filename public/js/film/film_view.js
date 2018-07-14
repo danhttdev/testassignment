@@ -3,7 +3,6 @@ $( document ).ready(function() {
     $.ajax({
         url: '/api'+window.location.pathname,
         success: function (data) {
-            console.log(data);
             let html = 
                 '<div class="item-film-detail clearfix">'+
                     '<div class="left">'+

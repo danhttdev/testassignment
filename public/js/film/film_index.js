@@ -1,11 +1,8 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
-    console.log(window.location.href)
     url = 'api/films';
     $.ajax({
         url: url,
         success: function (data) {
-            console.log(data);
             let html = '';
             data.map(item => {
                 html += '<div class="row">'+
