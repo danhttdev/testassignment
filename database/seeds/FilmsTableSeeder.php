@@ -20,7 +20,7 @@ class FilmsTableSeeder extends Seeder
         	'ticket_price' => 1200,
         	'country' => 'US',
         	'genre'	=> 'Action',
-        	'photo' => '1.jpg',
+        	'photo' => '1.jpeg',
         	'slug' => str_slug('Film A')
         ]);
         App\Film::create([
@@ -43,7 +43,7 @@ class FilmsTableSeeder extends Seeder
         	'ticket_price' => 2200,
         	'country' => 'US',
         	'genre'	=> 'Commedy',
-        	'photo' => '3.jpg',
+        	'photo' => '3.jpeg',
         	'slug' => str_slug('Film C')
 
         ]);

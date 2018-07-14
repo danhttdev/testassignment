@@ -13,6 +13,21 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group( ['middleware' => 'api','namespace' => 'Api'], function(){
+	Route::get('/films', 'FilmsController@index');
+	Route::get('/films/{slug}', 'FilmsController@getBySlug');
+	Route::get('/films/id/{id}', 'FilmsController@one');
+
+	//---------err-----------
+	Route::group(['middleware' => 'custom'], function(){
+		Route::post('film/create', 'FilmsController@postCreate')->name('create');
+	});
 });
+
+//---------err-----------
+Route::group( ['middleware' => 'custom','namespace' => 'Api'], function(){
+	Route::post('film/create', 'FilmsController@postCreate')->name('create');
+});
+
+Route::post('film/create', 'Api\FilmsController@postCreate')->name('create');
+Route::post('comment/create', 'Api\CommentsController@postCreate');

@@ -1,0 +1,71 @@
+body {
+    padding-top: 70px;
+}
+
+.navbar-right {
+    margin-right: 40px;
+}
+
+.item-film {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px dashed rgb(180, 210, 227);
+}
+
+.item-film .left {
+    float: left;
+    width:30%;
+}
+
+.item-film .left img {
+    width: 70%;
+    margin-left: 15%;
+    height: auto;
+}
+
+.item-film .right {
+    padding-left: 20px;
+    float: left;
+    width:30%;
+}
+
+.item-film-detail {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgb(180, 210, 227);
+}
+
+.item-film-detail .left {
+    float: left;
+    width:40%;
+}
+
+.item-film-detail .left img {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+}
+
+.item-film-detail .right {
+    padding-left: 20px;
+    float: left;
+    width:30%;
+}
+
+.item-comment {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    border-bottom: 1px dashed rgb(180, 210, 227);
+}
+
+.item-comment {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 60px;
+    border-bottom: 1px dashed rgb(180, 210, 227);
+}
+
+#film-set-comment {
+    margin-left: 30px;
+}

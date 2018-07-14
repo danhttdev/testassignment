@@ -10,4 +10,16 @@ class Film extends Model
     {
         return $this->hasMany('App\Comment');
     }
+
+    protected $fillable = [
+        'name',
+        'description',
+        'realease_date',
+        'rating',
+        'ticket_price',
+        'country',
+        'genre',
+        'photo',
+        'slug'
+    ];
 }
