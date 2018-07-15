@@ -24,6 +24,13 @@
             </div>
         </div>
     </div>
+
+    @auth
+        {{  setcookie('name', Auth::user()->name , time() + (86400 * 30), "/")    }}
+        {{  setcookie('id', Auth::user()->id , time() + (86400 * 30), "/")    }}
+    @else
+        
+    @endauth
 </div>
 
 @endsection

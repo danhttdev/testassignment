@@ -36,13 +36,34 @@ $( document ).ready(function() {
 
     $('#button-post-comment').click(function(){
         url = '/api/comment/create';
+        console.log( readCookie("user") );
+
         let data = {user_id:1,film_id:3,comment:'abcd'};
         $.ajax({
             url: url,
             data:data,
             method: 'POST',
             success: function (data) {
+                console.log(data);
+                let comment='<div class="row">'+
+                '<div class="item-comment">'+
+                    '<b>'+data.data.name+'</b>'+
+                    '<p>'+data.data.comment+'</p>'+
+                '</div>'+
+            '</div>';
+            $('#film-comment').append(comment);
             }
         });
     });
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
 });
